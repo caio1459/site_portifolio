@@ -224,6 +224,90 @@ main article img {
     font-size: 1.2rem;
 }
 
+/*Seção inferior*/
+.service {
+    margin-top: -30px;
+    padding: 60px;
+    background-color: #151515;
+}
+
+.my-service {
+    padding: 60px;
+    color: #f7f7f7;
+}
+
+.my-service ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-service ul li {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    gap: 30px;
+    display: grid;
+    text-align: center;
+    max-width: 300px;
+    height: 300px;
+    background-color: #222;
+    align-content: center;
+}
+
+.my-service ul li i {
+    font-size: 2rem;
+    color: rgb(255, 52, 52);
+}
+
+.my-service h3 {
+    font-size: 1.8rem;
+    font-family: 'Acme';
+}
+
+.my-service p {
+    color: #707070;
+}
+
+.my-service ul li::before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    top: -2px;
+    right: -2px;
+    position: absolute;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.my-service ul li::after {
+    content: '';
+    width: 0px;
+    transition: 0.5s ease-in-out;
+    height: 0px;
+    bottom: -2px;
+    left: -2px;
+    position: absolute;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+
+.my-service ul li:hover::before{
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid red;
+    border-right: 2px solid red;
+}
+
+.my-service ul li:hover::after{
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid red;
+    border-left: 2px solid red;
+}
+
 /*Funções*/
 @keyframes iniciar {
     from {
@@ -271,12 +355,12 @@ main article img {
 
 /*Responsividade*/
 @media (max-width: 992px) {
-    header nav ul{
+    header nav ul {
         display: none;
 
     }
 
-    header i{
+    header i {
         color: #f7f7f7;
         font-size: 3rem;
     }
