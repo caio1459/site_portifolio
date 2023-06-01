@@ -9,11 +9,13 @@ function maquinEscrever(elemento) {
     });
 }
 const digitando = window.document.querySelector('.digitando');
-maquinEscrever(digitando)
+maquinEscrever(digitando);
 
 //Menu Responsivo
-const ativaMenu = window.document.querySelector('.fa-bars')
+const ativaMenu = window.document.querySelector('.fa-bars');
+const navMenu = window.document.querySelector('.links');
 
 ativaMenu.addEventListener('click', () => {
-    ativaMenu.classList.toggle('fa-x')
+    ativaMenu.classList.toggle('fa-x');
+    navMenu.classList.toggle('ativado');
 })

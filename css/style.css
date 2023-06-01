@@ -35,21 +35,34 @@ header span {
     color: white;
 }
 
-header nav ul {
+.links {
     display: flex;
-    gap: 10px;
-    align-items: center;
+    gap: 30px;
+    margin: 20px 0px 0px 0px;
 }
 
-header nav ul li a {
+.links li a {
     color: white;
-    padding: 10px;
-    font-size: 14pt;
+    font-size: 1.2rem;
+    width: 0px;
+    height: 0px;
+    /* text-transform: uppercase; */
 }
 
-header nav ul li a:hover {
-    color: red;
+.links li a::after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    display: block;
+    border-bottom: 4px solid transparent;
     transition: 0.8s;
+}
+
+.links li a:hover::after {
+    width: 100%;
+    height: 0px;
+    padding: 0px;
+    border-bottom: 4px solid red;
 }
 
 /*Seção com efeito*/
@@ -224,6 +237,11 @@ main article img {
     font-size: 1.2rem;
 }
 
+.sobre-info a {
+    text-decoration: none;
+    color: #707070;
+}
+
 /*Seção inferior*/
 .service {
     margin-top: -30px;
@@ -294,20 +312,71 @@ main article img {
     border-left: 2px solid transparent;
 }
 
-.my-service ul li:hover::before{
+.my-service ul li:hover::before {
     width: 100%;
     height: 100%;
     border-top: 2px solid red;
     border-right: 2px solid red;
 }
 
-.my-service ul li:hover::after{
+.my-service ul li:hover::after {
     width: 100%;
     height: 100%;
     border-bottom: 2px solid red;
     border-left: 2px solid red;
 }
 
+/*Meus projetos*/
+.projects {
+    padding: 30px;
+    display: grid;
+    justify-content: center;
+    gap: 30px;
+    background-color: #151515;
+}
+
+.projects ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.projects-models ul li {
+    cursor: pointer;
+    font-family: 'Poppins';
+    background-color: #222;
+    border: 1px solid #333;
+    color: #707070;
+    padding: 6px 20px;
+    list-style: none;
+}
+
+.projects-models ul li:hover {
+    background-color: rgb(255, 52, 52);
+    color: black;
+    transition: 1s;
+}
+
+.my-projects ul {
+    display: grid;
+    margin-top: 60px;
+    gap: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.my-projects ul li {
+    max-width: 100%;
+    height: 100%;
+}
+
+.my-projects ul li img{
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    cursor: pointer;
+    list-style: none;
+}
 /*Funções*/
 @keyframes iniciar {
     from {
@@ -355,9 +424,23 @@ main article img {
 
 /*Responsividade*/
 @media (max-width: 992px) {
-    header nav ul {
-        display: none;
+    header {
+        justify-content: space-between;
+        padding: 30px 90px;
+    }
 
+    header .links {
+        display: none;
+    }
+
+    header .links.ativado {
+        background: linear-gradient(rgba(43, 42, 42, 0.176), rgba(46, 46, 46, 0.724));
+        position: absolute;
+        display: grid;
+        top: 80px;
+        padding: 30px;
+        right: 20px;
+        animation: dirSecao 0.4s ease-in-out forwards;
     }
 
     header i {
@@ -382,5 +465,6 @@ main article img {
 
     .sobre-conteudo {
         grid-column: 1/-1;
+        margin-top: 20px;
     }
 }
