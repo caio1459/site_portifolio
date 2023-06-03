@@ -24,6 +24,8 @@ header {
     align-items: center;
     justify-content: space-around;
     border-bottom: 1px white solid;
+
+
 }
 
 header h1 {
@@ -38,7 +40,13 @@ header span {
 .links {
     display: flex;
     gap: 30px;
-    margin: 20px 0px 0px 0px;
+    right: 50px;
+    position: fixed;
+
+}
+
+.links li {
+    list-style: none;
 }
 
 .links li a {
@@ -126,13 +134,13 @@ header span {
 }
 
 /*Seção principal sobre mim*/
-main {
+#sobre {
     margin-top: 40px;
     background-color: #111;
     color: white;
 }
 
-main article {
+#sobre article {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
@@ -140,7 +148,7 @@ main article {
     padding: 40px;
 }
 
-main article img {
+#sobre article img {
     animation: esqSecao 0.6s ease-in-out forwards;
     cursor: pointer;
     grid-row: 2;
@@ -332,7 +340,7 @@ main article img {
     display: grid;
     justify-content: center;
     gap: 30px;
-    background-color: #151515;
+    background-color: #151515a8;
 }
 
 .projects ul {
@@ -349,11 +357,12 @@ main article img {
     color: #707070;
     padding: 6px 20px;
     list-style: none;
+
 }
 
 .projects-models ul li:hover {
     background-color: rgb(255, 52, 52);
-    color: black;
+    color: white;
     transition: 1s;
 }
 
@@ -368,15 +377,66 @@ main article img {
 .my-projects ul li {
     max-width: 100%;
     height: 100%;
-}
-
-.my-projects ul li img{
-    max-width: 100%;
-    height: 100%;
-    border-radius: 10%;
-    cursor: pointer;
     list-style: none;
 }
+
+.my-projects ul li img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.my-projects ul li img:hover {
+    border: 2px solid rgb(255, 52, 52);
+}
+
+/*Footer*/
+footer {
+    background-color: black;
+    padding: 30px;
+}
+
+footer p {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins';
+    margin: 40px auto;
+}
+
+.sociais {
+    display: flex;
+    justify-content: center;
+    color: white;
+    gap: 30px;
+    flex-wrap: wrap;
+    /*Quebra o conteudo quando necessario*/
+    align-items: center;
+    position: relative;
+}
+
+.sociais li {
+    background-color: #212020;
+    border-radius: 50%;
+    border: 1px solid #333;
+    list-style: none;
+}
+
+.sociais li i {
+    padding: 30px;
+    font-size: 1.5rem;
+}
+
+.sociais li a {
+    color: white;
+}
+
+.sociais li i:hover {
+    transition: 0.3s ease-in-out;
+    color: rgb(255, 52, 52);
+}
+
 /*Funções*/
 @keyframes iniciar {
     from {
