@@ -513,7 +513,7 @@ footer p {
     }
 
     .container {
-        background-image: url(/images/portifolio.png);
+        background-image: url(../images/portifolio.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
